@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Duty Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customs Duty Calculator</h1>
+<!-- Product Search Feature -->
+<div>
+    <label for="productSearch">Search for Product:</label>
+    <input type="text" id="productSearch" oninput="searchProduct()" placeholder="Enter product name or description...">
+    <ul id="searchResults"></ul>
+  </div>
+
+        <form id="dutyForm">
+            <div class="form-field">
+                <label for="hsCode">HS Code:</label>
+                <input type="text" id="hsCode" required>
+            </div>
+            <div class="form-field">
+                <label for="cifFob">CIF or FOB:</label>
+                <select id="cifFob" required>
+                    <option value="CIF">CIF</option>
+                    <option value="FOB">FOB</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="cifValue">Value (in selected currency):</label>
+                <input type="number" id="cifValue" required>
+            </div>
+            <div class="form-field">
+                <label for="ancillaryCharges">Total Ancillary Charges:</label>
+                <input type="number" id="ancillaryCharges">
+            </div>
+            <div class="form-field">
+                <label for="freightValue">Freight Value:</label>
+                <input type="number" id="freightValue">
+            </div>
+            <div class="form-field">
+                <label for="insurancePremiumRate">Insurance Premium Rate:</label>
+                <input type="number" id="insurancePremiumRate" step="0.01">
+            </div>
+            <div class="form-field">
+                <label for="currency">Currency:</label>
+                <select id="currency" required>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="NGN">NGN</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="exchangeRate">Exchange Rate (to Naira):</label>
+                <input type="number" id="exchangeRate" required>
+            </div>
+
+            <hr/>
+            <div class="form-field buttons">
+                <button type="button" onclick="fetchHsCodeDetails()">Fetch HS Code Details</button>
+                <button type="button" onclick="calculateDuty()">Calculate</button>
+                <button type="button" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

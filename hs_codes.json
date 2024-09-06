@@ -1,0 +1,32 @@
+[
+    {
+        "code": "0101210000",
+        "description": "Live Purebred breeding horses",
+        "dov": "",
+        "exc": 0.0,
+        "id": 5,
+        "lvy": 0.0,
+        "su": "U",
+        "vat": 7.5
+    },
+    {
+        "code": "0101290000",
+        "description": "Live Horses other than pure bred",
+        "dov": null,
+        "exc": 0.0,
+        "id": 10,
+        "lvy": 0.0,
+        "su": "U",
+        "vat": 0.0
+    },
+    {
+        "code": "0101301000",
+        "description": "Live Purebred breeding asses",
+        "dov": null,
+        "exc": 0.0,
+        "id": 5,
+        "lvy": 0.0,
+        "su": "U",
+        "vat": 7.5
+    }
+]
